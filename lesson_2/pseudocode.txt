@@ -1,0 +1,37 @@
+A function that returns the sum of two numbers
+
+Casual
+
+1.Define a function with two parameters,
+    2.Inside the function body return the sum of the two parameters
+
+Formal
+
+A function that takes two numbers, number1 and number2.
+SET result = READ number1 + READ number2.
+
+PRINT result
+
+
+A function that takes a list of strings, and returns a string that is all those strings
+concatenated together.
+
+Casual
+
+define a function with one parameter that is a list with string elements.
+    set a variable named new_str equal to the empty string ''.
+    iterate through the parameter
+        in each iteration append the list element to new_str
+return new_str
+
+Formal
+
+START A function that takes one parameter, a list of string elements
+    SET new_str = empty string
+    SET iterator = 0
+    WHILE iterator < length list
+        SET new_str = READ new_str + READ list value at iterator space
+    PRINT new_str 
+
+
+
