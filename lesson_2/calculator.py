@@ -5,8 +5,19 @@
 # prompt the result to the terminal.
 # Ask the user if they would like to do another calculation.
 
+import json  # Load the messages from the JSON file
+
+
+
+with open('calculator_messages.json', 'r') as file:
+    MESSAGES = json.load(file)
+
+def messages(message, lang="en"):
+    return MESSAGES[lang][message]
+
 def prompt(message):
     print(f'==> {message}')
+
 def invalid_number(number_str):
     try:
         int(number_str)
@@ -16,20 +27,22 @@ def invalid_number(number_str):
     return False
 
 def calculator():
-    prompt('Welcome to Calculator!\n')
+    prompt(MESSAGES[language]['welcome'])
     # Ask the user for the first number
     prompt('What\'s the first number?\n')
     number1 = input()
+    
 
     while invalid_number(number1):
-        prompt("Hmm... that doesn't look like a valid number.\n")
+        prompt(MESSAGES[language]['invalid_number'])
         number1 = input()
 
     prompt("What's the second number?\n")
+
     number2 = input()
 
     while invalid_number(number2):
-        prompt("Hmm... that doesn't look like a valid number.\n")
+        prompt(MESSAGES[language]['invalid_number'])
         number2 = input()
 
     prompt(f'{number1} {number2}\n')
@@ -66,5 +79,22 @@ def calculator():
         calculator()
     else:
         prompt('Thanks for using the calculator, have a great day!\n')
+
+prompt("This is a calculator that can be configured in the following languages.")
+prompt("for English enter: en")
+prompt("for Spanish enter: es")
+prompt("for French enter: fr")
+prompt("for German enter: gr")
+prompt("If language is not properly provide the calculator will default to English")
+
+language = input()
+print(language)
+
+if language not in ('en', 'es', 'fr', 'gr'):
+    language = 'en'
+
+
+
+    
 
 calculator()

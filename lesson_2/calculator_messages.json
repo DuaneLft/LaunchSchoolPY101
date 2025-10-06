@@ -1,0 +1,19 @@
+{
+    "en":{
+        "welcome": "Welcome to Calculator!",
+        "invalid_number": "Hmm... that doesn't look like a valid number."
+    },
+    "es":{
+        "welcome": "Bienvenido a la calculadora!",
+        "invalid_number": "Hmm... eso no parece un nùmero valido."
+    },
+    "fr":{
+        "welcome": "Bienvenue sur la Caculatrice!",
+        "invalid_number": "Hmm... cela ne ressemble pas à un nombre valide."
+    },
+    "gr":{
+        "welcome": "Willkommen beim Rechner!",
+        "invalid_number": "Hmm... das sieht nicht wie eine gültige Zahl"
+    }
+
+}
