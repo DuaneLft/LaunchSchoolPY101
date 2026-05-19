@@ -64,7 +64,14 @@ while True:
             break
 
     if answer[0] == 'n':
-        break
-    
-  
+        break 
+"""WINNING_COMBOS = {
+    'rock': ['scissors', 'lizard'],
+    'paper': ['rock', 'spock'],
+    'scissors': ['paper', 'lizard'],
+    'lizard': ['paper', 'spock'],
+    'spock': ['rock', 'scissors'],
+}
 
+def player_wins(player_choice, computer_choice):
+    return computer_choice in WINNING_COMBOS[player_choice]"""
